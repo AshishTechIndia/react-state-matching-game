@@ -9,6 +9,14 @@ constructor(){
   super(this.props)
   this.state={numTiles:36,playing :false,previousTileIndex :null,tiles :[],toBeCleared:null }
 }
+startGame = (numTiles) => {
+  this.setState((state) => ({
+    playing: true,
+    previousTileIndex: null,
+    toBeCleared: null,
+    tiles: createTiles(state.numTiles)
+  }))
+}
   render() {
   return (
     <div className="App">
