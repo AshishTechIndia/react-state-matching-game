@@ -9,6 +9,9 @@ constructor(){
   super(this.props)
   this.state={numTiles:36,playing :false,previousTileIndex :null,tiles :[],toBeCleared:null }
 }
+handleTileClicked(id,color){
+
+}
 startGame = (numTiles) => {
   this.setState((state) => ({
     playing: true,
